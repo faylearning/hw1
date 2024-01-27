@@ -27,6 +27,10 @@ class ULListStr {
       first = last = 0;
       prev = next = NULL;
     }
+
+    size_t size() {
+      return this->last - this->first;
+    }
   };
 
   /**
@@ -113,6 +117,8 @@ class ULListStr {
    */
   void clear();
 
+  void print() const;
+
  private:
   /** 
    * Returns a pointer to the item at index, loc,
@@ -121,6 +127,7 @@ class ULListStr {
    */
   std::string* getValAtLoc(size_t loc) const;
 
+ 
 
   /**
    * Data members
